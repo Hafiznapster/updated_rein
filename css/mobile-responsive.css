@@ -1,0 +1,683 @@
+/* Mobile Responsive Styles for REIN Website */
+
+/* Extra Small Devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+    body {
+        padding-top: 0 !important;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Hero Section Mobile */
+    .hero-section {
+        padding: 2rem 0 3rem;
+        min-height: 85vh;
+    }
+
+    .hero-title {
+        font-size: 2rem !important;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem !important;
+        margin-bottom: 2rem;
+    }
+
+    /* Video Background Mobile */
+    .hero-video {
+        /* Ensure video covers full area on mobile */
+        object-fit: cover;
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .hero-video-overlay {
+        /* More transparent overlay on mobile for better video visibility */
+        background: linear-gradient(135deg, rgba(51, 96, 33, 0.5) 0%, rgba(74, 171, 61, 0.4) 100%) !important;
+    }
+
+    /* Fallback for devices that don't support video autoplay */
+    .hero-video-background::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, var(--rein-primary) 0%, var(--rein-primary-light) 100%);
+        z-index: 0;
+    }
+
+    .hero-tag .badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .hero-stats {
+        padding: 1rem;
+        margin-top: 2rem !important;
+    }
+
+    .stat-number {
+        font-size: 1.5rem !important;
+    }
+
+    .stat-label {
+        font-size: 0.7rem !important;
+    }
+
+    /* Navigation Mobile */
+    .navbar-brand img {
+        height: 35px !important;
+    }
+
+    .navbar-collapse {
+        margin-top: 0.5rem;
+        padding: 1rem;
+        background: rgba(51, 96, 33, 0.95);
+        border-radius: var(--bs-border-radius);
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem !important;
+        margin: 0.25rem 0;
+        border-radius: var(--bs-border-radius);
+    }
+
+    /* About Section Mobile */
+    .about-section {
+        padding: 3rem 0;
+    }
+
+    .about-image-placeholder {
+        padding: 1.5rem 1rem;
+        min-height: 200px;
+        margin-top: 2rem;
+    }
+
+    .mission-vision-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .mission-vision-card .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    /* Why Choose Section Mobile */
+    .why-choose-section {
+        padding: 3rem 0;
+    }
+
+    .feature-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .feature-item h5 {
+        font-size: 1rem;
+    }
+
+    .team-leader-card {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .team-leader-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .leader-avatar {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+    }
+
+    .leader-name {
+        font-size: 1.2rem;
+    }
+
+    .leader-quote {
+        font-size: 0.9rem;
+        padding-left: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .credential-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.4rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .hero-image-placeholder {
+        padding: 1.5rem 1rem;
+        min-height: 150px;
+    }
+
+    /* Services Section Mobile */
+    .services-section {
+        padding: 3rem 0;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+
+    /* New Service Cards Mobile */
+    .service-card-new {
+        margin-bottom: 1.5rem;
+    }
+
+    .service-image {
+        height: 180px;
+    }
+
+    .service-content {
+        padding: 1rem;
+    }
+
+    .service-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .service-category {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Contact Section Mobile */
+    .contact-section {
+        padding: 3rem 0;
+    }
+
+    .contact-form-wrapper {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-info-card {
+        padding: 1.5rem;
+    }
+
+    .contact-info-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+
+    .contact-icon {
+        margin: 0 auto;
+    }
+
+    .contact-content h5 {
+        font-size: 1rem;
+    }
+
+    .contact-map {
+        margin-top: 1.5rem;
+    }
+
+    .map-container iframe {
+        height: 220px;
+    }
+
+    .map-overlay {
+        position: static;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    /* Team Section Mobile */
+    .team-section {
+        padding: 3rem 0;
+    }
+
+    .team-member-card {
+        margin-bottom: 2rem;
+    }
+
+    .member-image-container {
+        height: 250px;
+    }
+
+    .member-info {
+        padding: 1.5rem;
+    }
+
+    .member-name {
+        font-size: 1.2rem;
+    }
+
+    .member-position {
+        font-size: 0.9rem;
+    }
+
+    .member-description {
+        font-size: 0.9rem;
+    }
+
+    .linkedin-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    /* Solar Solutions Section Mobile */
+    .solar-solutions-section {
+        padding: 3rem 0;
+    }
+
+    .solar-solutions-content {
+        padding: 1rem 0;
+        margin-top: 2rem;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .tab-content-wrapper {
+        min-height: auto;
+        margin-top: 1.5rem;
+    }
+
+    .benefit-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .benefit-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .benefit-text h5 {
+        font-size: 1rem;
+    }
+
+    .benefit-text p {
+        font-size: 0.9rem;
+    }
+
+    .floating-element {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .floating-element.element-3 {
+        right: -5px;
+    }
+
+    .expertise-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+    }
+
+    .expertise-text {
+        font-size: 0.85rem;
+    }
+
+    .mission-content,
+    .goal-content {
+        padding: 1rem;
+    }
+
+    .mission-content .lead,
+    .goal-content .lead {
+        font-size: 1rem;
+    }
+
+    /* Featured Projects Section Mobile */
+    .featured-projects-section {
+        padding: 3rem 0;
+    }
+
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .button-area {
+        order: 2;
+    }
+
+    .featured-project-card {
+        margin-bottom: 2rem;
+    }
+
+    .project-image-container {
+        height: 220px;
+    }
+
+    .project-content {
+        padding: 1.5rem;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+    }
+
+    .project-stats {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .stat-item {
+        font-size: 0.8rem;
+    }
+
+    .icon-img {
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+    }
+
+    .project-overlay {
+        padding: 1rem;
+    }
+
+    /* Project Filter Tabs Mobile */
+    .project-filter-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-filter-tabs .nav-link {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* Project Page Mobile */
+    .project-hero-section {
+        min-height: 80vh;
+        padding: 2rem 0;
+    }
+
+    .hero-stats {
+        margin-top: 2rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    .capacity-badge {
+        position: static;
+        margin-top: 1rem;
+        display: inline-block;
+    }
+
+    .capacity-number {
+        font-size: 1.5rem;
+    }
+
+    .detail-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .spec-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .spec-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .spec-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+
+    .performance-summary {
+        padding: 1.5rem;
+    }
+
+    .performance-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .performance-number {
+        font-size: 1.5rem;
+    }
+
+    .feature-highlight-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .feature-highlight-card .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .impact-stat-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .impact-number {
+        font-size: 1.5rem;
+    }
+
+    .impact-point {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    /* CTA Section Mobile */
+    .cta-section {
+        padding: 3rem 0;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-section .lead {
+        font-size: 1rem;
+        margin-bottom: 2rem !important;
+    }
+
+    /* Footer Mobile */
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-widget {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .footer-logo {
+        max-width: 120px;
+        margin: 0 auto 1rem;
+        display: block;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+
+    /* Buttons Mobile */
+    .btn-lg {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* Notification Mobile */
+    .notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        transform: translateY(-100px);
+    }
+
+    .notification.show {
+        transform: translateY(0);
+    }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem !important;
+    }
+
+    .stat-number {
+        font-size: 2rem !important;
+    }
+
+    .btn-lg {
+        max-width: 320px;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-title {
+        font-size: 3rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem !important;
+    }
+
+    .hero-stats {
+        margin-top: 3rem !important;
+    }
+
+    .about-image-placeholder {
+        margin-top: 0;
+    }
+
+    .mission-vision-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .service-card:hover,
+    .mission-vision-card:hover,
+    .btn:hover {
+        transform: none;
+    }
+
+    .service-card:active,
+    .mission-vision-card:active {
+        transform: scale(0.98);
+    }
+
+    .btn:active {
+        transform: scale(0.95);
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-background,
+    .cta-section::before {
+        background-size: 50px 50px;
+    }
+}
