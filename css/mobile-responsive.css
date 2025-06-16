@@ -78,6 +78,32 @@
         height: 35px !important;
     }
 
+    /* Hide hamburger menu since we have bottom navigation */
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    /* Hide navbar collapse on mobile since we use bottom nav */
+    .navbar-collapse {
+        display: none !important;
+    }
+
+    /* Clean mobile navbar - only logo centered */
+    .navbar {
+        padding: 0.75rem 0 !important;
+    }
+
+    .navbar .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        justify-content: center !important;
+    }
+
+    .navbar-brand {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
     .navbar-collapse {
         margin-top: 0.5rem;
         padding: 1rem;
@@ -241,6 +267,38 @@
 
     .contact-info-card {
         padding: 1.5rem;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Fix email overflow in contact cards */
+    .contact-info-card .contact-content {
+        overflow: hidden;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+        min-width: 0;
+        flex: 1;
+    }
+
+    .contact-info-card .contact-content a {
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    /* Specific fix for long email addresses */
+    .contact-info-card .contact-content a[href*="@"] {
+        word-break: break-all;
+        white-space: normal;
+        overflow-wrap: break-word;
+        hyphens: none;
+        font-size: 0.85rem;
+        line-height: 1.3;
     }
 
     .contact-info-item {
