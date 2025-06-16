@@ -27,36 +27,32 @@ class MobileEnhancer {
 
         if (!navbar) return;
 
-        // Since we removed hamburger menu, we only need scroll behavior
-        // Navbar scroll behavior - hide on scroll down, show on scroll up
+        // Navbar scroll behavior - keep navbar visible on all devices
         let lastScrollY = window.scrollY;
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
 
-            if (this.isMobile) {
-                // On mobile, keep navbar visible since it only shows logo
-                navbar.style.transform = 'translateY(0)';
-            } else {
-                // On desktop, use scroll behavior
-                if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                    navbar.style.transform = 'translateY(-100%)';
-                } else {
-                    navbar.style.transform = 'translateY(0)';
-                }
-            }
+            // Keep navbar visible on all devices
+            navbar.style.transform = 'translateY(0)';
 
             lastScrollY = currentScrollY;
         });
+
+        // Ensure navbar toggler works properly on mobile
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        if (navbarToggler && navbarCollapse) {
+            navbarToggler.addEventListener('click', function() {
+                const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+                navbarToggler.setAttribute('aria-expanded', !isExpanded);
+            });
+        }
     }
 
     // Enhanced Mobile Dropdowns
     setupMobileDropdowns() {
-        // Since we removed mobile navbar, dropdowns are only for desktop
-        // We can skip mobile dropdown setup as navigation is handled by bottom nav
-        if (this.isMobile) {
-            return; // No dropdown functionality needed on mobile
-        }
-
+        // Enable dropdown functionality on all devices
         const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
         dropdownToggles.forEach(toggle => {

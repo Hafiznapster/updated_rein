@@ -24,6 +24,29 @@ function initNavbar() {
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('.navbar-collapse');
 
+    // Ensure navbar is visible on page load
+    if (navbarCollapse) {
+        // Force navbar to be visible immediately on desktop
+        if (window.innerWidth >= 992) {
+            navbarCollapse.style.display = 'flex';
+            navbarCollapse.classList.add('show');
+        } else {
+            // On mobile, ensure it's available for toggle
+            navbarCollapse.style.display = 'block';
+        }
+
+        // Handle window resize to maintain proper navbar state
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 992) {
+                navbarCollapse.style.display = 'flex';
+                navbarCollapse.classList.add('show');
+            } else {
+                navbarCollapse.style.display = 'block';
+                navbarCollapse.classList.remove('show');
+            }
+        });
+    }
+
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
@@ -48,7 +71,7 @@ function initNavbar() {
 
     // Handle enhanced dropdown functionality
     initDropdown();
-    
+
     // Set active nav item based on current page
     setActiveNavItem();
 }
