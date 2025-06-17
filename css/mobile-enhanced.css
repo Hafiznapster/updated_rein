@@ -384,7 +384,7 @@
   }
 }
 
-/* ===== MOBILE BOTTOM NAVIGATION ENHANCEMENT ===== */
+/* ===== BOTTOM NAVIGATION - MOBILE ONLY ===== */
 .mobile-bottom-nav {
   position: fixed;
   bottom: 0;
@@ -396,21 +396,30 @@
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   padding: 0.5rem 0;
+  display: block !important; /* Ensure immediate visibility */
+  opacity: 1 !important; /* Override any fade animations */
+  transform: translateY(0) !important; /* Override any slide animations */
+  visibility: visible !important; /* Ensure visibility */
 }
 
 .mobile-nav-item {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 0.5rem;
-  color: var(--rein-text-secondary);
+  padding: 0.875rem 0.5rem;
+  color: #666;
   text-decoration: none;
   transition: all 0.3s ease;
   border-radius: 12px;
   margin: 0 0.25rem;
-  min-height: var(--touch-target-comfortable);
+  min-height: 65px;
   touch-action: manipulation;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  opacity: 1 !important; /* Ensure immediate visibility */
+  visibility: visible !important; /* Override any hiding */
 }
 
 .mobile-nav-item.active,
@@ -429,6 +438,87 @@
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1;
+}
+
+/* ===== IMMEDIATE VISIBILITY OVERRIDES ===== */
+/* Ensure bottom navigation is immediately visible on page load */
+@media (max-width: 991px) {
+  .mobile-bottom-nav {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+
+  .mobile-bottom-nav .container-fluid,
+  .mobile-bottom-nav .row,
+  .mobile-bottom-nav .col {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .mobile-nav-item {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* ===== MOBILE LOGO NAVBAR STYLES ===== */
+.mobile-logo-navbar {
+  background: linear-gradient(135deg, var(--rein-primary) 0%, var(--rein-primary-dark) 100%);
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 15px rgba(51, 96, 33, 0.2);
+  backdrop-filter: blur(10px);
+  z-index: 1001; /* Higher than bottom nav */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-logo-navbar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-logo-navbar .navbar-brand {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.mobile-logo-navbar .navbar-brand img {
+  transition: all 0.3s ease;
+  filter: brightness(1.1);
+}
+
+.mobile-logo-navbar .navbar-brand:hover {
+  transform: scale(1.02);
+}
+
+.mobile-logo-navbar .navbar-brand:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* ===== RESPONSIVE BODY PADDING ===== */
+/* Mobile: Add padding for both top logo navbar and bottom navigation */
+@media (max-width: 991px) {
+  body {
+    padding-top: 65px; /* Space for mobile logo navbar */
+    padding-bottom: 80px; /* Space for bottom navigation */
+  }
+}
+
+/* Desktop: Add padding only for top navbar */
+@media (min-width: 992px) {
+  body {
+    padding-top: 80px; /* Space for desktop navbar */
+    padding-bottom: 0; /* No bottom navigation on desktop */
+  }
 }
 
 /* ===== PERFORMANCE OPTIMIZATIONS ===== */

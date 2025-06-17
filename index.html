@@ -39,64 +39,56 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- Mobile Logo Navbar - Mobile Only -->
+    <nav class="navbar navbar-dark fixed-top d-lg-none mobile-logo-navbar">
+        <div class="container">
+            <a class="navbar-brand mx-auto" href="index.html">
+                <img src="images/logo-02.png" alt="REIN Logo" height="35" class="d-inline-block align-text-top">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Desktop Navigation - Desktop Only -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top d-none d-lg-block">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo-02.png" alt="REIN Logo" height="40" class="d-inline-block align-text-top">
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutus.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="project.html">Projects</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item" href="service.html">
-                                <i class="fas fa-list-ul me-2"></i>All Services
-                            </a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="design-and-consultancy.html">
-                                <i class="fas fa-drafting-compass me-2"></i>Design & Consultancy
-                            </a></li>
-                            <li><a class="dropdown-item" href="solar-battery-ev.html">
-                                <i class="fas fa-solar-panel me-2"></i>Solar, Battery & EV
-                            </a></li>
-                            <li><a class="dropdown-item" href="wind.html">
-                                <i class="fas fa-wind me-2"></i>Wind Energy
-                            </a></li>
-                            <li><a class="dropdown-item" href="energy-audit-monitoring.html">
-                                <i class="fas fa-chart-line me-2"></i>Energy Audit, Monitoring & Management
-                            </a></li>
-                            <li><a class="dropdown-item" href="maintenance-servicing.html">
-                                <i class="fas fa-tools me-2"></i>Servicing
-                            </a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-                
-                <div class="d-none d-lg-block ms-3">
-                    <a href="contact.html" class="btn btn-secondary">
-                        <i class="fas fa-phone me-2"></i>Let's Talk
+
+            <div class="navbar-nav ms-auto d-flex flex-row">
+                <a class="nav-link active me-4" href="index.html">Home</a>
+                <a class="nav-link me-4" href="aboutus.html">About</a>
+                <a class="nav-link me-4" href="project.html">Projects</a>
+                <div class="nav-item dropdown me-4">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
                     </a>
+                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="service.html">
+                            <i class="fas fa-list-ul me-2"></i>All Services
+                        </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="design-and-consultancy.html">
+                            <i class="fas fa-drafting-compass me-2"></i>Design & Consultancy
+                        </a></li>
+                        <li><a class="dropdown-item" href="solar-battery-ev.html">
+                            <i class="fas fa-solar-panel me-2"></i>Solar, Battery & EV
+                        </a></li>
+                        <li><a class="dropdown-item" href="wind.html">
+                            <i class="fas fa-wind me-2"></i>Wind Energy
+                        </a></li>
+                        <li><a class="dropdown-item" href="energy-audit-monitoring.html">
+                            <i class="fas fa-chart-line me-2"></i>Energy Audit, Monitoring & Management
+                        </a></li>
+                        <li><a class="dropdown-item" href="maintenance-servicing.html">
+                            <i class="fas fa-tools me-2"></i>Servicing
+                        </a></li>
+                    </ul>
                 </div>
+                <a class="nav-link me-4" href="contact.html">Contact</a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <i class="fas fa-phone me-2"></i>Let's Talk
+                </a>
             </div>
         </div>
     </nav>
@@ -675,7 +667,7 @@
         </div>
     </footer>
 
-    <!-- Mobile Bottom Navigation -->
+    <!-- Bottom Navigation - Mobile Only -->
     <div class="mobile-bottom-nav d-lg-none">
         <div class="container-fluid">
             <div class="row">

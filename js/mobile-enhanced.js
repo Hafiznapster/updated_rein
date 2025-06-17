@@ -319,6 +319,12 @@ class MobileEnhancer {
         const bottomNav = document.querySelector('.mobile-bottom-nav');
         if (!bottomNav) return;
 
+        // Ensure immediate visibility (override any hiding styles)
+        bottomNav.style.display = 'block';
+        bottomNav.style.opacity = '1';
+        bottomNav.style.visibility = 'visible';
+        bottomNav.style.transform = 'translateY(0)';
+
         const navItems = bottomNav.querySelectorAll('.mobile-nav-item');
         const currentPage = window.location.pathname;
 
@@ -355,6 +361,27 @@ class MobileEnhancer {
         });
     }
 }
+
+// Immediate bottom navigation visibility (before DOM is fully loaded)
+(function() {
+    function ensureBottomNavVisibility() {
+        const bottomNav = document.querySelector('.mobile-bottom-nav');
+        if (bottomNav && window.innerWidth <= 991) {
+            bottomNav.style.display = 'block';
+            bottomNav.style.opacity = '1';
+            bottomNav.style.visibility = 'visible';
+            bottomNav.style.transform = 'translateY(0)';
+        }
+    }
+
+    // Try immediately
+    ensureBottomNavVisibility();
+
+    // Try again when DOM is interactive
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', ensureBottomNavVisibility);
+    }
+})();
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
